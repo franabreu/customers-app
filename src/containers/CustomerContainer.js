@@ -27,9 +27,7 @@ class CustomerContainer extends Component {
             <div>
                 <AppFrame
                     header={`Cliente ${this.props.dni}`}
-                    body= {this.renderBody()
-                        /* <p>Datos del cliente "{this.props.customer.name}"</p> */
-                    }>
+                    body= {this.renderBody()}>
                 </AppFrame>
             </div>
         );
@@ -38,7 +36,7 @@ class CustomerContainer extends Component {
 
 CustomerContainer.propTypes = {
     dni: PropTypes.string.isRequired,
-    customer: PropTypes.object.isRequired,
+    customer: PropTypes.object,
 };
 
 const mapStateToProps = (state, props) => ({
