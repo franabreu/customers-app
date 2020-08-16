@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import HomeContainer from './containers/HomeContainer';
+import CustomersContainer from './containers/CustomersContainer';
 import CustomerContainer from './containers/CustomerContainer';
 
 function App() {
@@ -9,7 +10,13 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path='/' component={HomeContainer}></Route>
-        <Route exact path='/customers' component={CustomerContainer}></Route>
+        <Route exact path='/customers' component={CustomersContainer}></Route>
+        <Switch>
+          {/* <Route path='/customers/new' component={}></Route> */}
+          <Route path='/customer/:dni' 
+            render={props => <CustomerContainer dni={props.match.params.dni}/>}>
+          </Route>
+        </Switch>
       </div>
     </Router>
 
