@@ -31,3 +31,8 @@ code {
   background: #EEE;
   display: inline-block;
 }
+
+.form-error {
+  color: red;
+  padding-left: 6px;
+}
