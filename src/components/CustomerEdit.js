@@ -47,11 +47,21 @@ const toNumber = value => value && Number(value);
 
 class CustomerEdit extends Component {
 
-    renderField = ({ input, meta, type, name, label }) => (
+    componentDidMount() {
+        if (this.focusField) {
+            this.focusField.focus();
+        } 
+    }
+    
+
+    renderField = ({ input, meta, type, name, label, withFocus }) => (
         <div>
             <label htmlFor={name}>{label} </label>
             <div>
-                <input {...input} type={!type ? "text" : type}></input>
+                <input {...input} 
+                    type={!type ? "text" : type}
+                    ref={withFocus && (focusField => this.focusField = focusField)}>
+                </input>
                 {
                     meta.touched && meta.error && <span className='form-error'>{meta.error}</span>
                 }
@@ -68,6 +78,7 @@ class CustomerEdit extends Component {
                     <Field
                         name="name"
                         label="Nombre"
+                        withFocus
                         component={this.renderField}
                         validate={isRequired}>
                     </Field>
@@ -93,7 +104,7 @@ class CustomerEdit extends Component {
                             Calcelar
                         </button>
                     </CustomersActions>
-                    <Prompt 
+                    <Prompt
                         when={!pristine && !submitSucceeded}
                         message={"¿Está seguro de que desea cancelar? Se perderán las modificaciones realizadas."}>
                     </Prompt>

@@ -7,52 +7,16 @@
       "age": 22
     },
     {
-      "id": "987654321A",
-      "name": "María",
-      "dni": "987654321A",
-      "age": 23
+      "name": "Ana",
+      "dni": "123123123R",
+      "age": 5,
+      "id": "2qY49IY"
     },
     {
-      "id": "987654322B",
       "name": "Pedro",
-      "dni": "987654322B",
-      "age": 27
-    },
-    {
-      "name": "Fran",
-      "dni": "123454321F",
-      "age": 1,
-      "id": "j9NPcRr"
-    },
-    {
-      "name": "Angel",
       "dni": "454635284D",
-      "age": 23,
-      "id": "UjVSRUq"
-    },
-    {
-      "name": "Fran",
-      "dni": "123123123",
-      "age": 1,
-      "id": "3KSgJZY"
-    },
-    {
-      "name": "wwe",
-      "dni": "wewer",
-      "age": 1,
-      "id": "f_7sN1K"
-    },
-    {
-      "name": "Nuevo cliente",
-      "dni": "1324566",
-      "age": 4,
-      "id": "60yfmYv"
-    },
-    {
-      "name": "NEW 2",
-      "dni": "24",
       "age": 2,
-      "id": "6hAjZTo"
+      "id": "clVjjIL"
     }
   ]
 }
